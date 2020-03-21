@@ -64,14 +64,13 @@ The negatively associated features are  cleaning_fee, "missing" reviews_per_mont
 
 Cluster 3 is the group that have the highest average rental price.
 
-![png]({{ site.baseurl }}/images/Looking_at_Seattle_AirBnB_files/Looking_at_Seattle_AirBnB_154_0.png)
+![png]({{ site.baseurl }}/images/Looking_at_Seattle_AirBnB_files/cluster3.png)
 
-Cluster 3 is very similar to cluster 7 except that it has higher cleaning fees.   
+Cluster 3 is all about the rental place - number of bedrooms, how many people it can accomodate, number of beds/bathrooms, and how many guests are included in the rental price.   
 
-The features that are positively associated with this cluster are reviews_per_month, host_response_time_within an hour, number_of_reviews, instant_bookable_t and cancellation_policy_moderate.   
+The features that are positively associated with this cluster are bedrooms, accommodates, beds, bathrooms and guests_included.   
 
-The negatively associated features are  cleaning_fee, "missing" reviews_per_month,
-"missing" review_scores_rating, number of bedrooms and "missing" host_acceptance_rate.   
+The negatively associated features are cancellation_policy_moderate, "unknown" host_response_time, "missing" host_response_rate, "missing" cleaning_fee, and private room.   
 
 ## Conclusions
 
@@ -85,5 +84,5 @@ We can see that clusters 14 and 1 are quite the opposite to each other. Renters 
 
 Cluster 7 has lots of reviews, can be instantly booked with moderate cancellation policy, and lower cleaning fees.
 
-Cluster 3 is the group of listings that has the highest mean rental price.  Cluster 3 is very similar to Cluster 7 except that it has higher cleaning fees.
+Cluster 3 is all about the rental place - number of bedrooms, how many people it can accomodate, number of beds/bathrooms, and how many guests are included in the rental price.
 
