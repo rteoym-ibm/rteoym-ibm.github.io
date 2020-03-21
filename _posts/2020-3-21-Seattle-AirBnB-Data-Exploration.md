@@ -1,3 +1,5 @@
+![jpg]({{ site.baseurl }}/images/Looking_at_Seattle_AirBnB_files/room.jpg)
+
 ## Introduction
 
 In this article, we are going to look at Seattle AirBnB data (located [here](https://www.kaggle.com/airbnb/seattle/data)), and answer the following renters' questions.   
@@ -85,4 +87,8 @@ We can see that clusters 14 and 1 are quite the opposite to each other. Renters 
 Cluster 7 has lots of reviews, can be instantly booked with moderate cancellation policy, and lower cleaning fees.
 
 Cluster 3 is all about the rental place - number of bedrooms, how many people it can accomodate, number of beds/bathrooms, and how many guests are included in the rental price.
+
+##Acknowledgement
+
+This dataset is part of Airbnb Inside, and the original source can be found [here](http://insideairbnb.com/get-the-data.html).  The dataset is made available under a [Creative Commons CC0 1.0 Universal (CC0 1.0) "Public Domain Dedication"](http://creativecommons.org/publicdomain/zero/1.0/) license.
 
