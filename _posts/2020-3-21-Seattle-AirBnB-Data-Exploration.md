@@ -88,7 +88,7 @@ Cluster 7 has lots of reviews, can be instantly booked with moderate cancellatio
 
 Cluster 3 is all about the rental place - number of bedrooms, how many people it can accomodate, number of beds/bathrooms, and how many guests are included in the rental price.
 
-##Acknowledgement
+## Acknowledgement
 
 This dataset is part of Airbnb Inside, and the original source can be found [here](http://insideairbnb.com/get-the-data.html).  The dataset is made available under a [Creative Commons CC0 1.0 Universal (CC0 1.0) "Public Domain Dedication"](http://creativecommons.org/publicdomain/zero/1.0/) license.
 
