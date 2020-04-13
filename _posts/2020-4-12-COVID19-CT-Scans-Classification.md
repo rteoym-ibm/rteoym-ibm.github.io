@@ -1,4 +1,4 @@
-# COVID19 CT Scans Classifications
+![jpg]({{ site.baseurl }}/images/covid19_udacity/covid19.jpg)
 
 ## Introduction
 
@@ -4064,6 +4064,3 @@ df_result.to_csv('single_image_classification_results.csv', index=False)
 * We should be able fine-tune the individual five models to get a better performances of each model, which in turn, should also improve the performance of the Majority Voting committee.
 
 
-```python
-
-```
