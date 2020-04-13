@@ -1,4 +1,4 @@
-<h1 align=center><font size = 5>COVID19 CT Scans Classifications</font></h1>
+# COVID19 CT Scans Classifications
 
 ## Introduction
 
@@ -17,21 +17,6 @@ We seek to investigate whether Deep Learning models can effectively speed up the
   * **Recall(sensitivity)** tells us what proportion of scans that actually were positive were classified by us as positive.  It is a ratio of true positives(scans classified as positive, and which are actually positive) to all the scans that were actually positive.
 
   * **F-beta score** is the weighted harmonic mean of precision and recall, reaching its optimal value at 1 and its worst value at 0.  The $\beta$ parameter determines the weight of recall in the combined score. beta < 1 lends more weight to precision, while beta > 1 favors recall (beta -> 0 considers only precision, beta -> +inf only recall).  In particular, when $\beta = 0.5$, more emphasis is placed on precision. This is called the **F$_{0.5}$ score** (or F-score for simplicity).
-
-## Table of Contents
-
-<div class="alert alert-block alert-info" style="margin-top: 20px">
-
-<font size = 3>    
-
-1. <a href="#item41">Data Understanding 
-2. <a href="#item42">Data Preparation and Modeling</a>
-3. <a href="#item43">Evaluation</a>  
-4. <a href="#item44">Conclusions</a>  
-
-</font>
-    
-</div>
 
 
 ```python
@@ -185,7 +170,7 @@ with Image.open(img_path) as image1:
 
 
 
-![png]({{ site.baseurl }}/images/covid19_udacity/output_14_1.png)
+![png]({{ site.baseurl }}/images/covid19_udacity/output_13_1.png)
 
 
 <a id="item42"></a>
@@ -1310,7 +1295,7 @@ plot_training_loss_and_accuracy(vgg16_fit_history, 'Evolution of loss and accura
 ```
 
 
-![png]({{ site.baseurl }}/images/covid19_udacity/output_37_0.png)
+![png]({{ site.baseurl }}/images/covid19_udacity/output_36_0.png)
 
 
 
@@ -1726,7 +1711,7 @@ plot_training_loss_and_accuracy(resnet50_fit_history, 'Evolution of loss and acc
 ```
 
 
-![png]({{ site.baseurl }}/images/covid19_udacity/output_39_0.png)
+![png]({{ site.baseurl }}/images/covid19_udacity/output_38_0.png)
 
 
 
@@ -2142,7 +2127,7 @@ plot_training_loss_and_accuracy(densenet121_fit_history, 'Evolution of loss and 
 ```
 
 
-![png]({{ site.baseurl }}/images/covid19_udacity/output_41_0.png)
+![png]({{ site.baseurl }}/images/covid19_udacity/output_40_0.png)
 
 
 
@@ -2558,7 +2543,7 @@ plot_training_loss_and_accuracy(nasnetmobile_fit_history, 'Evolution of loss and
 ```
 
 
-![png]({{ site.baseurl }}/images/covid19_udacity/output_43_0.png)
+![png]({{ site.baseurl }}/images/covid19_udacity/output_42_0.png)
 
 
 
@@ -2974,7 +2959,7 @@ plot_training_loss_and_accuracy(inceptionv3_fit_history, 'Evolution of loss and 
 ```
 
 
-![png]({{ site.baseurl }}/images/covid19_udacity/output_45_0.png)
+![png]({{ site.baseurl }}/images/covid19_udacity/output_44_0.png)
 
 
 
@@ -3521,7 +3506,7 @@ report_vgg16 = display_result(vgg16_prediction, vgg16_test_generator, 'vgg16_con
 
 
 
-![png]({{ site.baseurl }}/images/covid19_udacity/output_78_1.png)
+![png]({{ site.baseurl }}/images/covid19_udacity/output_77_1.png)
 
 
 
@@ -3544,7 +3529,7 @@ report_resnet50 = display_result(resnet50_prediction, resnet50_test_generator, '
 
 
 
-![png]({{ site.baseurl }}/images/covid19_udacity/output_79_1.png)
+![png]({{ site.baseurl }}/images/covid19_udacity/output_78_1.png)
 
 
 
@@ -3567,7 +3552,7 @@ report_densenet121 = display_result(densenet121_prediction, densenet121_test_gen
 
 
 
-![png]({{ site.baseurl }}/images/covid19_udacity/output_80_1.png)
+![png]({{ site.baseurl }}/images/covid19_udacity/output_79_1.png)
 
 
 
@@ -3590,7 +3575,7 @@ report_nasnetmobile = display_result(nasnetmobile_prediction, nasnetmobile_test_
 
 
 
-![png]({{ site.baseurl }}/images/covid19_udacity/output_81_1.png)
+![png]({{ site.baseurl }}/images/covid19_udacity/output_80_1.png)
 
 
 
@@ -3613,7 +3598,7 @@ report_inceptionv3 = display_result(inceptionv3_prediction, inceptionv3_test_gen
 
 
 
-![png]({{ site.baseurl }}/images/covid19_udacity/output_82_1.png)
+![png]({{ site.baseurl }}/images/covid19_udacity/output_81_1.png)
 
 
 ##### Majority voting from a committee of our Models
@@ -3707,7 +3692,7 @@ report_majority_vote = display_result(majority_vote_prediction, vgg16_test_gener
 
 
 
-![png]({{ site.baseurl }}/images/covid19_udacity/output_86_1.png)
+![png]({{ site.baseurl }}/images/covid19_udacity/output_85_1.png)
 
 
 
@@ -3941,7 +3926,7 @@ with Image.open(img_path) as image1:
 
 
 
-![png]({{ site.baseurl }}/images/covid19_udacity/output_91_1.png)
+![png]({{ site.baseurl }}/images/covid19_udacity/output_90_1.png)
 
 
 
@@ -4072,8 +4057,13 @@ df_result.to_csv('single_image_classification_results.csv', index=False)
 
 ## Conclusions
 
-* Majority voting from a committee of our five models gives the highest precision, recall, f1-score for COVID and NonVID than the individual models.
+* Majority voting from a committee of our five models gives the highest precision, recall, f1-score for COVID and NonCOVID than the individual models.
 
 * The f1-score for Majority voting for COVID prediction is 0.756477, NonCOVID 0.772947 and the accuracy of the predictions is 0.765000.
 
 * We should be able fine-tune the individual five models to get a better performances of each model, which in turn, should also improve the performance of the Majority Voting committee.
+
+
+```python
+
+```
