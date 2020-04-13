@@ -16,7 +16,7 @@ We seek to investigate whether Deep Learning models can effectively speed up the
 
   * **Recall(sensitivity)** tells us what proportion of scans that actually were positive were classified by us as positive.  It is a ratio of true positives(scans classified as positive, and which are actually positive) to all the scans that were actually positive.
 
-  * **F-beta score** is the weighted harmonic mean of precision and recall, reaching its optimal value at 1 and its worst value at 0.  The $\beta$ parameter determines the weight of recall in the combined score. beta < 1 lends more weight to precision, while beta > 1 favors recall (beta -> 0 considers only precision, beta -> +inf only recall).  In particular, when $\beta = 0.5$, more emphasis is placed on precision. This is called the **F$_{0.5}$ score** (or F-score for simplicity).
+  * **F-beta score** is the weighted harmonic mean of precision and recall, reaching its optimal value at 1 and its worst value at 0.  The beta parameter determines the weight of recall in the combined score. beta < 1 lends more weight to precision, while beta > 1 favors recall (beta -> 0 considers only precision, beta -> +inf only recall).  In particular, when beta = 0.5, more emphasis is placed on precision. This is called the **F-0.5 score** (or F-score for simplicity).
 
 
 ```python
@@ -3156,7 +3156,7 @@ In this part, we will evaluate our deep learning models on a test data. For this
 
 1. Load our saved model that was built using the five models. 
 2. Construct an ImageDataGenerator for the test set. For this ImageDataGenerator instance, you only need to pass the directory of the test images, target size, and the **shuffle** parameter and set it to False.
-3. Use the **evaluate_generator** method to evaluate your models on the test data, by passing the above ImageDataGenerator as an argument. You can learn more about **evaluate_generator** [here](https://keras.io/models/sequential/).
+3. Use the **evaluate_generator** method to evaluate our models on the test data, by passing the above ImageDataGenerator as an argument. You can learn more about **evaluate_generator** [here](https://keras.io/models/sequential/).
 4. Print the performances of our five classifiers.
 
 
