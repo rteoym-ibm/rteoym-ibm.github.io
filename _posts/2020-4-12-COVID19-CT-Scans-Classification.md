@@ -113,7 +113,7 @@ In [here](https://github.com/UCSD-AI4H/COVID-CT/tree/master/Images-processed), t
   |   |   +-- valCT_NonCOVID.txt
   ```
 
-  Each of the above text files contain the filename of the samples.
+  Each of the above text files contains the filenames of the samples.
 
 
 ```python
@@ -177,14 +177,14 @@ with Image.open(img_path) as image1:
 
 ## Data Preparation and Modeling
 
-We are going to use five pre-trained models (VGG16, ResNet50, DenseNet121, NASNetMobile and InceptionV3) from [keras](https://keras.io/applications/), and determine which model will give the best performance using the above measures.
+We are going to use five pre-trained models (VGG16, ResNet50, DenseNet121, NASNetMobile and InceptionV3) from [keras](https://keras.io/applications/), and determine which model give the best performance using the above measures.
 
 In subsequent sections, we are only going to mention about VGG16 pre-trained model.  The rest of the four models are following exactly the same procedure.  We can import the model <code>VGG16</code> from <code>keras.applications</code>.
 
-We essentially build your classifier as follows:
+We essentially build our classifier as follows:
 1. Import libraries, modules, and packages you will need. Make sure to import the *preprocess_input* function from <code>keras.applications.vgg16</code>.
 2. Use a batch size of 100 images for both training and validation.
-3. Construct an ImageDataGenerator for the training set and another one for the validation set. VGG16 was originally trained on 224 × 224 images, so make sure to address that when defining the ImageDataGenerator instances.  All the five pre-trained models use 224 × 224 images, except InceptionV3 where 299 x 299 images are used.
+3. Construct an ImageDataGenerator for the training set and another one for the validation set. VGG16 was originally trained on 224 × 224 images, we will take that into account when defining the ImageDataGenerator instances.  All the five pre-trained models use 224 × 224 images, except InceptionV3 where 299 x 299 images are used.
 4. Create a sequential model using Keras. Add VGG16 model to it and dense layer.
 5. Compile the mode using the adam optimizer and the categorical_crossentropy loss function.
 6. Fit the model on the augmented data using the ImageDataGenerators.   
@@ -3824,10 +3824,10 @@ df_result.to_csv('single_image_classification_results.csv', index=False)
 
 ## Conclusions
 
-* Majority voting from a committee of our five models gives the highest precision, recall, f1-score for COVID and NonCOVID than the individual models.
+* Majority voting from a committee of our five models gives the highest precision, recall, f1-score for COVID and NonCOVID predictions than the individual models.
 
-* The f1-score for Majority voting for COVID prediction is 0.756477, NonCOVID 0.772947 and the accuracy of the predictions is 0.765000.
+* The f1-score for Majority voting for COVID predictions is 0.756477, NonCOVID 0.772947 and the accuracy of the predictions is 0.765000.
 
-* We should be able fine-tune the individual five models to get a better performances of each model, which in turn, should also improve the performance of the Majority Voting committee.
+* We should be able fine-tune the individual five models to get a better performances for each model, which in turn, should also improve the performance of the Majority Voting committee.
 
 
