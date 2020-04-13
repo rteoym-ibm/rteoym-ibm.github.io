@@ -3056,9 +3056,6 @@ print('Statistics of Training:')
 display(df_val_accuracy)
 ```
 
-    Statistics of Training:
-
-
 
 ![png]({{ site.baseurl }}/images/covid19_udacity/model_results.png)
 
